@@ -1,0 +1,74 @@
+Topic 1: Bats (Bioacoustics & Ecology)
+Bat Document 1: Bat echolocation basics
+
+Bats use echolocation to navigate and hunt in low-light conditions. They emit ultrasonic sound pulses and listen to the echoes reflected from surrounding objects. By analyzing the delay and frequency shift of these echoes, bats can determine the distance, size, and movement of prey or obstacles.
+
+Different bat species emit calls with distinct frequency ranges and temporal patterns. These variations allow researchers to identify species using acoustic recordings. Echolocation is especially effective in complete darkness where vision is limited.
+
+Bat Document 2: Bat call structure and frequency
+
+Bat echolocation calls typically consist of short pulses lasting a few milliseconds. These pulses can be constant frequency (CF), frequency-modulated (FM), or a combination of both. FM calls are useful for precise distance measurement, while CF calls are better for detecting moving targets.
+
+The frequency of bat calls often ranges from 20 kHz to over 100 kHz, depending on the species. Smaller bats usually emit higher-frequency calls, while larger bats use lower frequencies.
+
+Bat Document 3: Bat species classification using audio
+
+Automatic bat species classification relies on extracting features from ultrasonic audio recordings. Common features include call duration, peak frequency, bandwidth, and interpulse interval. These features can be used as input to machine learning models.
+
+Modern systems often combine signal processing techniques with machine learning algorithms such as Random Forests or convolutional neural networks. Accurate classification is essential for ecological monitoring and conservation efforts.
+
+Bat Document 4: Environmental challenges in bat monitoring
+
+Bat call recordings are often affected by noise from wind, insects, rain, and human activity. These environmental factors can distort signals and reduce classification accuracy. Overlapping calls from multiple bats further complicate analysis.
+
+To address these challenges, preprocessing steps such as bandpass filtering and noise reduction are applied. Robust algorithms must generalize across varying environmental conditions.
+
+Topic 2: LangChain (LLM Framework & RAG)
+LangChain Document 1: What is LangChain
+
+LangChain is a framework designed to build applications powered by large language models. It provides abstractions for prompts, models, memory, tools, and retrieval systems. The goal of LangChain is to simplify the orchestration of LLM-based workflows.
+
+LangChain supports both simple chains and more advanced runnable-based architectures. These allow developers to compose complex pipelines involving multiple steps and models.
+
+LangChain Document 2: Prompt templates and variables
+
+Prompt templates in LangChain allow developers to define reusable prompts with placeholders. Variables are dynamically injected at runtime, enabling flexible and consistent prompt construction.
+
+Partial variables can be pre-filled values that remain constant across calls. This is useful when combining prompts with output parsers or structured formats.
+
+LangChain Document 3: Runnables and execution flow
+
+Runnables are the core execution units in modern LangChain. They represent callable components that can be composed into sequences, parallels, or conditional branches.
+
+RunnableSequence executes components sequentially, while RunnableParallel runs multiple components simultaneously using the same input. This design enables efficient and modular pipeline construction.
+
+LangChain Document 4: Retrieval-augmented generation (RAG)
+
+Retrieval-augmented generation combines vector search with language models. Relevant documents are retrieved from a vector store and injected into the prompt context before generating a response.
+
+RAG improves factual accuracy and reduces hallucinations by grounding LLM outputs in external knowledge sources. LangChain provides built-in tools to integrate retrievers with LLMs.
+
+Topic 3: Kafka (Distributed Streaming Systems)
+Kafka Document 1: Introduction to Apache Kafka
+
+Apache Kafka is a distributed event streaming platform used to build real-time data pipelines. It enables producers to publish messages to topics and consumers to subscribe to those topics.
+
+Kafka is designed for high throughput, fault tolerance, and horizontal scalability. It is widely used in data engineering and microservice architectures.
+
+Kafka Document 2: Topics, partitions, and offsets
+
+A Kafka topic is divided into partitions, which allow data to be distributed across multiple brokers. Each message within a partition is assigned an offset, which represents its position in the log.
+
+Consumers track offsets to know which messages have been processed. This design enables replayability and fault recovery.
+
+Kafka Document 3: Kafka consumers and consumer groups
+
+Kafka consumers read messages from topics and process them. Multiple consumers can form a consumer group, where each partition is assigned to only one consumer within the group.
+
+This mechanism enables parallel processing while maintaining message order within partitions. If a consumer fails, Kafka automatically rebalances partitions.
+
+Kafka Document 4: Kafka reliability and delivery semantics
+
+Kafka supports different delivery semantics: at-most-once, at-least-once, and exactly-once. These semantics control how messages are delivered and processed under failure conditions.
+
+Exactly-once semantics ensure that messages are processed without duplication, even in the presence of retries. This is critical for financial and stateful applications.

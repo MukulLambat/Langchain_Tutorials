@@ -1,0 +1,28 @@
+=====
+
+Dec 08, 2017 12:20:53 PM org.infinispan.client.hotrod.RemoteCacheManager start
+INFO: ISPN004021: Infinispan version: 9.1.1.Final
+Dec 08, 2017 12:20:53 PM cutenames.CacheAccessVerticle lambda$start$1
+INFO: Cache connection successfully done
+Dec 08, 2017 12:20:53 PM cutenames.CuteNamesRestAPI initSuccess
+INFO: Starting CuteNamesRestAPI in localhost:8081
+Dec 08, 2017 12:21:22 PM cutenames.CuteNamesRestAPI handleAddCuteName
+INFO: Add called
+Dec 08, 2017 12:21:22 PM cutenames.CuteNamesRestAPI lambda$handleAddCuteName$2
+INFO: Cute name added [42]
+
+=====
+
+INFO: ISPN004021: Infinispan version: 9.1.1.Final
+Dec 08, 2017 12:20:57 PM cutenames.SendCuteNamesAPI addConfigToCache
+INFO: Added cute names listener
+Dec 08, 2017 12:20:57 PM cutenames.CacheAccessVerticle lambda$start$1
+INFO: Cache connection successfully done
+Dec 08, 2017 12:20:57 PM cutenames.SendCuteNamesAPI initSuccess
+INFO: Starting SendCuteNamesAPI
+Dec 08, 2017 12:20:57 PM cutenames.SendCuteNamesAPI lambda$initSuccess$1
+INFO: HTTP server started
+Dec 08, 2017 12:21:22 PM cutenames.SendCuteNamesAPI$CuteNamesListener lambda$created$0
+INFO: Publish name Oihana
+
+=====
