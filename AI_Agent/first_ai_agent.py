@@ -22,11 +22,13 @@ agent_executor = AgentExecutor(
     agent=agent,
     tools=[web_search_tool],
     verbose=True,
-    max_iterations=2,
+    # max_iterations=2,
 )
 
 # %% invoke the agent with query
-response = agent_executor.invoke({"input": "How is Siegen's weather today?"})
+response = agent_executor.invoke(
+    {"input": "who won 14 January 2026 India vs New Zealand ODI match?"}
+)
 print(response)
 
 # %%
