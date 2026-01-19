@@ -21,3 +21,24 @@ while True:
     chathistory.append(AIMessage(content=reply.content))
 
 print(chathistory)
+
+# %%
+from langchain.chat_models import init_chat_model
+
+
+model = init_chat_model(model="llama3.2:latest", model_provider="ollama")
+response = model.invoke("Hello")
+
+# %% Load model using LLAMACPP
+from langchain_openai import ChatOpenAI
+
+llm = ChatOpenAI(
+    base_url="http://127.0.0.1:8080",
+    api_key="not-needed",  # llama-server doesn't enforce it unless you configure one
+    model="local-model",  # any string is fine for llama-server
+    temperature=0.5,
+)
+response = llm.invoke("Say Hello")
+print(response.content)
+
+# %%
